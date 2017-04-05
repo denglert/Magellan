@@ -1,0 +1,70 @@
+model_name: 2HDMtII_NLO 
+#param_pt : /scratch/de3u14/2HDM-Zh/MadGraph/analysis-v2/param_pts/Epsilon_point_b.dat
+#param_pt : /scratch/de3u14/2HDM-Zh/MadGraph/analysis-v2/param_pts/Epsilon_point_a.dat
+param_pt : /scratch/de3u14/2HDM-Zh/MadGraph/analysis-v2/param_pts/Epsilon_point_c.dat
+
+
+mg5_parameters:
+
+        tb:
+          block: frblock
+          lhaid: 1
+        sinba:
+          block: frblock
+          lhaid: 2
+
+        l2:
+          block: higgs
+          lhaid: 1
+        l3:
+          block: higgs
+          lhaid: 2
+        l7:
+          block: higgs
+          lhaid: 3
+
+        mh:
+          block: mass
+          lhaid: 25
+          value: 125.09
+        mH:
+          block: mass
+          lhaid: 35
+        mA:
+          block: mass
+          lhaid: 36
+        mHc:
+          block: mass
+          lhaid: 37
+
+        Gamma_h:
+          block: decay
+          lhaid: 25
+        Gamma_H:
+          block: decay
+          lhaid: 35
+        Gamma_A:
+          block: decay
+          lhaid: 36
+        Gamma_Hc:
+            block: decay
+            lhaid: 37
+
+tag_parameters:
+    - cba
+    - tb
+    - mA
+    - mH
+    - mHc
+    - Z7
+
+components:
+         - qq_Zh
+         - gg_Zh_SM
+         - gg_Zh_box
+         - gg_Zh_int
+         - gg_Zh_tri
+         - gg_Zh_A
+         - gg_Zh_all
+
+luminosity: 40

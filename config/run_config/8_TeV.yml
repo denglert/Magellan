@@ -1,0 +1,10 @@
+settings:
+    nEvents : 10000
+    ebeam1  : 4000
+    ebeam2  : 4000
+    pythia  : ON
+    delphes : ON
+    run_tag : tag_1
+
+delphes_card_path : /scratch/de3u14/MWTC/analysis/distribution/Zh/magellan/mg5_cards/delphes_card_ATLAS.dat
+pythia_card_path  : /scratch/de3u14/MWTC/analysis/distribution/Zh/magellan/mg5_cards/pythia_card.dat

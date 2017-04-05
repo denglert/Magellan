@@ -1,0 +1,10 @@
+model_name: SM
+
+components:
+         - qq_Zh
+         - gg_Zh_SM
+         - gg_Zh_box
+         - gg_Zh_int
+         - gg_Zh_tri
+
+luminosity: 40

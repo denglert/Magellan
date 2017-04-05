@@ -1,0 +1,10 @@
+settings:
+    nEvents : 100000
+    ebeam1  : 6500
+    ebeam2  : 6500
+    pythia  : ON
+    delphes : ON
+    run_tag : tag_1
+
+delphes_card_path : /scratch/de3u14/2HDM-Zh/MadGraph/analysis-v2/mg5_cards/delphes_card_ATLAS.dat
+pythia_card_path  : /scratch/de3u14/2HDM-Zh/MadGraph/analysis-v2/mg5_cards/pythia_card.dat

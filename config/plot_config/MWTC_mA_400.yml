@@ -1,0 +1,103 @@
+color:
+    black   : 1
+    red     : 2
+    green   : 3
+    blue    : 4
+    yellow  : 5
+    magenta : 6
+
+first_plot      : zh_r1_only
+remaining_plots :
+    - zh_all
+    - zh_r2_only
+    - zh_z_only
+    - zh_r2_excl
+
+legend :
+    textsize: 0.030
+    bl_corner_x : 0.73
+    bl_corner_y : 0.75
+    tr_corner_x : 0.94
+    tr_corner_y : 0.96
+
+label :
+    text    : 'MWTC: #sqrt{s} = 8 TeV, m_{A}=400 GeV, S=0.3, s=0.0'
+    pos_x   : 0.38
+    pos_y   : 0.93
+    shift_y : 0.042
+    text_size : 0.025
+
+ranges:
+    y_min: -0.1
+    y_max:  9.5
+
+components:
+         zh_all         :
+            name       : zh_all
+            color      : 1
+            label      : 'pp #rightarrow Zh'
+            line_width : 3
+            line_style : 1
+            nEvents    : 10000
+            K_factor   : 1.0
+         zh_r1_only :
+            name    : zh_r1_only
+            color   : 2
+            label      : 'pp #rightarrow R^{0}_{1} #rightarrow Zh'
+            line_width : 2
+            line_style : 2
+            K_factor   : 1.0
+            nEvents : 10000
+         zh_r2_only :
+            name    : zh_r2_only
+            color   : 6
+            label      : 'pp #rightarrow R^{0}_{2} #rightarrow Zh'
+            line_width : 2
+            line_style : 2
+            K_factor   : 1.0
+            nEvents : 10000
+         zh_z_only :
+            name    : zh_z_only
+            color   : 4
+            label      : 'pp #rightarrow Z #rightarrow Zh'
+            line_width : 2
+            line_style : 2
+            K_factor   : 1.0
+            nEvents : 10000
+         zh_r2_excl :
+            name    : zh_r2_excl
+            color   : 3
+            label      : 'pp #rightarrow R^{0}_{1} + Z #rightarrow Zh'
+            line_width : 2
+            line_style : 2
+            K_factor   : 1.0
+            nEvents : 10000
+
+
+
+levels :
+    - parton
+    - parton-with-cuts
+
+types :
+  mZh:
+    name:   'mZh'
+    xlabel: 'm_{inv}(Zh) [GeV]'
+    ylabel: '#frac{d#sigma}{dm_{Zh^{0}}}  #left[#frac{fb}{GeV}#right]'
+  h_pt:
+    name:   'h_pt'
+    xlabel: 'p_{T}(h) [GeV]'
+    ylabel: '#frac{d#sigma}{dp_{T,h}}  #left[#frac{fb}{GeV}#right]'
+  Z_pt:
+    name:   'Z_pt'
+    xlabel: 'p_{T}(Z) [GeV]'
+    ylabel: '#frac{d#sigma}{dp_{T,Z}}  #left[#frac{fb}{GeV}#right]'
+
+histo_name_template_format : '{}_{}_{}-level'
+
+#    
+#    types = { 'mZh'  : {'xlabel' : 'm_{inv}(Zh) [GeV]', 'ylabel' : 'd#sigma/dm_{Zh^{0}} [fb/GeV]','name' : 'mZh'}  ,
+#              'h_pt' : {'xlabel' : 'p_{T}(h) [GeV]'   , 'ylabel' : 'd#sigma/dp_{T,h} [fb/GeV]'   ,'name' : 'h_Pt'} ,
+#              'Z_pt' : {'xlabel' : 'p_{T}(Z) [GeV]'   , 'ylabel' : 'd#sigma/dp_{T,Z} [fb/GeV]'   ,'name' : 'Z_Pt'}  }
+#
+

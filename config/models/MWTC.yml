@@ -1,0 +1,19 @@
+model_name: MWT_MG
+param_pt : /scratch/de3u14/2HDM-Zh/MadGraph/analysis-v2/param_pts/mA_200_right_arm_B1.dat 
+
+mg5_parameters:
+
+tag_parameters:
+    - mA
+    - gt
+    - PS
+    - rs
+
+components:
+         - zh_all
+         - zh_r1_only
+         - zh_r2_only
+         - zh_z_only
+         - zh_r2_excl
+
+luminosity: 40

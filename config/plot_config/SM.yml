@@ -1,0 +1,120 @@
+color:
+    black   : 1
+    red     : 2
+    green   : 3
+    blue    : 4
+    yellow  : 5
+    magenta : 6
+
+first_plot      : qq_Zh
+remaining_plots :
+    - gg_Zh_SM
+    - gg_Zh_box
+    - gg_Zh_int
+    - gg_Zh_tri
+
+ranges:
+    y_min: -1.0
+    y_max:  8.0
+
+legend :
+    textsize: 0.030
+    bl_corner_x : 0.78
+    bl_corner_y : 0.75
+    tr_corner_x : 0.96
+    tr_corner_y : 0.96
+
+label :
+    text    : 'SM - parton level, #sqrt{s} = 13 TeV'
+    pos_x   : 0.50
+    pos_y   : 0.93
+    shift_y : 0.042
+    text_size : 0.025
+
+label_int :
+    text    : ''
+    pos_x   : 0.72
+    pos_y   : 0.70
+    shift_y : 0.042
+    text_size : 0.025
+
+components:
+         qq_Zh         :
+            name       : qq_Zh
+            color      : 6
+            label      : 'qq #rightarrow Zh'
+            line_width : 3
+            line_style : 1
+            nEvents    : 100000
+            K_factor   : 1.31422
+         gg_Zh_SM  :
+            name    : gg_Zh_SM
+            color   : 4
+            label      : 'gg #rightarrow Zh'
+            line_width : 3
+            line_style : 1
+            K_factor   : 2.13539
+            nEvents : 100000
+         gg_Zh_box :
+            name    : gg_Zh_box
+            color   : 9
+            label      : 'gg #rightarrow Zh (box)'
+            line_width : 2
+            line_style : 3
+            K_factor   : 2.13539
+            nEvents : 100000
+         gg_Zh_int :
+            name    : gg_Zh_int
+            color   : 8
+            label      : 'gg #rightarrow Zh (int)'
+            line_width : 2
+            line_style : 4
+            K_factor   : 2.13539
+            nEvents : 100000
+         gg_Zh_tri :
+            name    : gg_Zh_tri
+            color   : 7
+            label      : 'gg #rightarrow Zh (tri)'
+            line_width : 2
+            line_style : 2
+            K_factor   : 2.13539
+            nEvents : 100000
+
+levels :
+        parton:
+                name: 'parton-level'
+        bb:
+                name: 'h #rightarrow bb'
+        bb_cuts:
+                name: 'h #rightarrow bb, p_{T}(b) > 50 GeV'
+        Z_cuts:
+                name: 'p_{T}(Z) > 200 GeV'
+        bb_and_Z_cuts:
+                name: 'p_{T}(Z) > 200 GeV, h #rightarrow bb'
+        Z_cuts_and_bb_cuts:
+                name: 'p_{T}(Z) > 200 GeV, p_{T}(b) > 50 GeV'
+        Z_cuts_and_bb_cuts_high_pt_h:
+                name: 'p_{T}(Z) > 200 GeV, p_{T}(b) > 50 GeV, p_{T}(h) > 100 GeV'
+
+types :
+  mZh:
+    name:   'mZh'
+    xlabel: 'm_{inv}(Zh) [GeV]'
+    ylabel: '#frac{d#sigma}{dm_{Zh^{0}}}  #left[#frac{fb}{GeV}#right]'
+  h_pt:
+    name:   'h_pt'
+    xlabel: 'p_{T}(h) [GeV]'
+    ylabel: '#frac{d#sigma}{dp_{T,h}}  #left[#frac{fb}{GeV}#right]'
+  Z_pt:
+    name:   'Z_pt'
+    xlabel: 'p_{T}(Z) [GeV]'
+    ylabel: '#frac{d#sigma}{dp_{T,Z}}  #left[#frac{fb}{GeV}#right]'
+
+histo_name_template_format : '{}_{}_{}-level'
+
+#    
+#    types = { 'mZh'  : {'xlabel' : 'm_{inv}(Zh) [GeV]', 'ylabel' : 'd#sigma/dm_{Zh^{0}} [fb/GeV]','name' : 'mZh'}  ,
+#              'h_pt' : {'xlabel' : 'p_{T}(h) [GeV]'   , 'ylabel' : 'd#sigma/dp_{T,h} [fb/GeV]'   ,'name' : 'h_Pt'} ,
+#              'Z_pt' : {'xlabel' : 'p_{T}(Z) [GeV]'   , 'ylabel' : 'd#sigma/dp_{T,Z} [fb/GeV]'   ,'name' : 'Z_Pt'}  }
+#
+
